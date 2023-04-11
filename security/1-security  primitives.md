@@ -2,7 +2,7 @@
 
 ### `API server`
     * The kube-apiserver is at the center of all operations within Kubernetes.
-    * We interact with it through the kube control utility or by accessing the API directly.
+    * We interact with it through the kubectl utility or by accessing the API directly.
     * The first line of defense.
 
 
