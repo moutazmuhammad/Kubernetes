@@ -94,6 +94,11 @@ kubectl apply -f admin-csr.yaml
 ```
 kubectl certificate approve admin-csr
 ```
+
+* To reject request"
+```
+kubectl certificate deny admin-csr
+```
 ## 7- Retrieve the signed certificate:
 ```
 kubectl get csr admin-csr -o jsonpath='{.status.certificate}' | base64 --decode > admin.crt
