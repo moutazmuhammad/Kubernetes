@@ -18,8 +18,8 @@
 ### ** (what can they do?) is defined by `authorization mechanisms`.
  * Authorization is implemented using role-based access controls (RBAC) where users are associated to groups with specific permissions.
  * Attribute-based access control (ABAC).
- * Node authorizers.
- * Webhooks.
+ * Node Authorization.
+ * Webhooks mode.
 
 
 ### ** All communication with the cluster between the various components such as the ETCD cluster, the kube-controller-manager, scheduler, API server, as well as those running on the worker nodes such as the Kubelet and the kube-proxy is secured using `TLS encryption`.
