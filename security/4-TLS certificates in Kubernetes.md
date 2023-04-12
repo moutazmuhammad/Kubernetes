@@ -6,7 +6,8 @@
 ## 1- `Server Certificates`
 ### (Api server - ETCD server - Kubelete server)
 
-* Server certificates are used to authenticate the Kubernetes API server to other components in the cluster. They contain information about the server's public key and identity, and are used to encrypt data between the API server and other components in the cluster. The API server generates a self-signed certificate when it is first installed, but this certificate is not suitable for use in production environments.
+* Server certificates are used to authenticate the Kubernetes API server to other components in the cluster. They contain information about the server's public key and identity, and are used to encrypt data between the API server and other components in the cluster. 
+* The API server generates a `self-signed` certificate when it is first installed, but this certificate is not suitable for use in production environments.
 
 * To create a server certificate in Kubernetes, you can use a tool like kubeadm or cert-manager. These tools allow you to create a Certificate Signing Request (CSR) that can be sent to a trusted Certificate Authority (CA) to issue a server certificate. Once the server certificate is issued, it can be installed on the API server and used to secure communication with other components.
 
