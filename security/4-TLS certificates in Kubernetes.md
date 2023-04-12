@@ -1,6 +1,7 @@
 # TLS certificates in Kubernetes
 
-### TLS certificates in Kubernetes are used to establish secure communication channels between various components. There are `Three` types of certificates used in Kubernetes - server certificates and client certificates.
+### TLS certificates in Kubernetes are used to establish secure communication channels between various components. 
+### There are `Three` types of certificates used in Kubernetes - server certificates and client certificates.
 
 ## `Server Certificates`
 ### (Api server - ETCD server - Kubelete server)
