@@ -1,23 +1,23 @@
 # TLS certificates in Kubernetes
 
 ### TLS certificates in Kubernetes are used to establish secure communication channels between various components. 
-### There are `Three` types of certificates used in Kubernetes - server certificates and client certificates.
+### There are `Three` types of certificates used in Kubernetes:
 
-## `Server Certificates`
+## 1- `Server Certificates`
 ### (Api server - ETCD server - Kubelete server)
 
 * Server certificates are used to authenticate the Kubernetes API server to other components in the cluster. They contain information about the server's public key and identity, and are used to encrypt data between the API server and other components in the cluster. The API server generates a self-signed certificate when it is first installed, but this certificate is not suitable for use in production environments.
 
 * To create a server certificate in Kubernetes, you can use a tool like kubeadm or cert-manager. These tools allow you to create a Certificate Signing Request (CSR) that can be sent to a trusted Certificate Authority (CA) to issue a server certificate. Once the server certificate is issued, it can be installed on the API server and used to secure communication with other components.
 
-## `Client Certificates`
+## 2- `Client Certificates`
 ### (Admins - Kube Schedule - Kube Controler - Kube Proxy) - and anything speak with kube-api server
 
 * Client certificates are used to authenticate Kubernetes components to the API server. They contain information about the client's public key and identity, and are used to encrypt data between the client and the API server. Various Kubernetes components such as kubelet, kube-proxy, and the Kubernetes dashboard use client certificates to authenticate themselves to the API server.
 
 * To create a client certificate in Kubernetes, you can use the same tools as for creating a server certificate. Once the client certificate is issued, it can be installed on the component that needs to authenticate itself to the API server.
 
-## `Root Certificates`
+## 3- `Root Certificates`
 * CA Certificates is used to sign server and client Certificates.
 
 
