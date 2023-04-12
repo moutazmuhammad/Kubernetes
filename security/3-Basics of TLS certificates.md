@@ -59,3 +59,6 @@
 
 * In the case of asymmetric encryption, the client uses the server's public key to encrypt the session key and send it to the server. The server then uses its private key to decrypt the session key and establish the SSL/TLS session.
 
+## `Note`:
+### - The server can request a certificate from the client to validate their identity.
+### - The client generates a pair of keys and a signed certificate from a valid CA and sends it to the server.
