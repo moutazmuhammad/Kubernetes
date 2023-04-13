@@ -1,8 +1,8 @@
 # Generate Certificates
 
-* To generate certificates, there are different tools available such as `Easy-RSA, OpenSSL, or CFSSL, et cetera`, or many others.
+* To generate certificates, there are different tools available such as `Easy-RSA, OpenSSL or CFSSL or many others.
 
-## `We will start with the CA certificates.` 
+# 1] `Generate CA certificates.` 
 
 ## 1- Create private key (`ca.key`)
 ```
@@ -31,7 +31,7 @@ openssl x509 -req -in ca.crt -signkey ca.key -out ca.crt
 * Going forward for all other certificates. we will use the CA key pair to sign them.
 
 
-# `generating the client certificates.`
+# 2] `Generate the client certificates.`
 
 #  admin user.
 

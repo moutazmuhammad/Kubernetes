@@ -30,3 +30,23 @@
 
 * To simplify the management of TLS certificates in Kubernetes, you can use tools like `cert-manager`. Cert-manager is an open-source tool that automates the issuance and renewal of TLS certificates in Kubernetes. It can be used to automatically generate and manage TLS certificates for Kubernetes components, and can also integrate with external Certificate Authorities (CAs) for issuing certificates.
 
+# `Note 1`:
+## The servers communicate amongst them as well. For example:
+### - the kube-apiserver communicates with the etcd server.
+### - In fact, of all the components, the kube-apiserver is the only server that talks to the etcd server.
+### - So as far as the `etcd server is concerned, the kube-apiserver is a client`, so it needs to authenticate.
+### - The kube-apiserver can use the same keys that it used earlier for serving its own API service.
+    apiserver.crt    &    apiserver.key
+### - Or you can generate a new pair of certificates specifically for the kube-apiserver to authenticate to the etcd server.
+
+# `Note 1`:
+## The kube-apiserver also talks to the kubelet server on each of the individual nodes.
+### - It can use the original certificates, or generate new ones specifically for this purpose.
+
+
+## Kubernetes requires you to have at least one certificate authority for your cluster.
+## In fact, you can have more than one.
+### - One for all the components in the cluster
+### - another one specifically for etcd.
+
+- In that case, the etcd servers certificates and the etcd servers client certificates, which in this case is the API server client certificate, will be all signed by the etcd server CA.

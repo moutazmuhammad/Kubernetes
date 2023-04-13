@@ -109,4 +109,4 @@ kubectl get crt <crt-name> -o yaml
 ```
 - Now, the `admin.crt` file contains the signed certificate that corresponds to the private key in `admin.key`. This certificate can be used to authenticate as an admin user in Kubernetes. To use the certificate, you can create a Kubernetes `kubeconfig file` that references the certificate and the corresponding private key.
 
-> All the certificate related operations are carried out by the `controller manager`.
+> Note: All the certificate related operations are carried out by the `controller manager`.
