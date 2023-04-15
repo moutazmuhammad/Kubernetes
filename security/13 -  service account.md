@@ -51,3 +51,8 @@ kubectl exec -it <pod-name> --ls /var/run/secret/kubernetes.io/serviceaccount
 
 ## * To use service account inside pod add field `serviceAccountName` under `spec` section 
 ## * You may choose not to mount a service account automatically by setting the `automountServiceAccountToken` field to `false` under `spec` section
+
+## To create token for service account `make token name == SA name`
+```
+kubectl create token <sa-name>
+```
