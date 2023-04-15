@@ -26,7 +26,6 @@ kubectl create secret docker-registry <sectet-name> \
     - Docker registry is a built in secret type that was built for storing Docker credentials.
 
 ### * Then  specify the secret inside our pod definition file under the image pull secret section. (under `spec` section)
-
 ```
 imagePullSecrets:
 - name:<sectet-name>
